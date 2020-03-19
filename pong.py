@@ -29,6 +29,12 @@ paddle_right.goto(480,0)
 
 
 #Ball
+ball = turtle.Turtle()
+ball.speed(0)
+ball.shape("square")
+ball.color("black")
+ball.penup()
+ball.goto(0,0)
 
 #Main loop
 
