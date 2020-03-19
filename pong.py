@@ -27,7 +27,6 @@ paddle_right.shapesize(stretch_wid=7,stretch_len=1)
 paddle_right.penup()
 paddle_right.goto(480,0)
 
-
 #Ball
 ball = turtle.Turtle()
 ball.speed(0)
@@ -36,8 +35,24 @@ ball.color("black")
 ball.penup()
 ball.goto(0,0)
 
-#Main loop
+# Left paddle movement
+def paddle_l_up():
+    y = paddle_left.ycor()
+    y += 30
+    paddle_left.sety(y)
 
+def paddle_l_down():
+    y = paddle_left.ycor()
+    y -= 30
+    paddle_left.sety(y)
+
+wn.listen()
+wn.onkeypress(paddle_l_up, "w")
+wn.onkeypress(paddle_l_down, "s")
+
+
+
+#Main loop
 while True:
     wn.update()
 
