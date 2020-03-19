@@ -46,10 +46,22 @@ def paddle_l_down():
     y -= 30
     paddle_left.sety(y)
 
+# Right paddle movement
+def paddle_r_up():
+    y = paddle_right.ycor()
+    y += 30
+    paddle_left.sety(y)
+
+def paddle_r_down():
+    y = paddle_right.ycor()
+    y -= 30
+    paddle_left.sety(y)
+
 wn.listen()
 wn.onkeypress(paddle_l_up, "w")
 wn.onkeypress(paddle_l_down, "s")
-
+wn.onkeypress(paddle_r_up, "Up")
+wn.onkeypress(paddle_r_down, "Down")
 
 
 #Main loop
